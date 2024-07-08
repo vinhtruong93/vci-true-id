@@ -1,0 +1,11 @@
+framework module IDCardReaderLite {
+  umbrella header "IDCardReaderLite.h"
+  export *
+
+  module * { export * }
+}
+
+module IDCardReaderLite.Swift {
+  header "IDCardReaderLite-Swift.h"
+  requires objc
+}

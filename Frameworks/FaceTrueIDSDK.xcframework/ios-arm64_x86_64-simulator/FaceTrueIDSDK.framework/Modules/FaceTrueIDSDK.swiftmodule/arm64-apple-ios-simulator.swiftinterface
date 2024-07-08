@@ -1,0 +1,86 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FaceTrueIDSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AVKit
+import Foundation
+import Swift
+import UIKit
+import Vision
+import _Concurrency
+import _StringProcessing
+@objc public class ConfigInfoFaceSDK : ObjectiveC.NSObject {
+  @objc public var domain: Swift.String
+  @objc public var domainPath: Swift.String
+  @objc public var authDomain: Swift.String
+  @objc public var authDomainPath: Swift.String
+  @objc public var appId: Swift.String
+  @objc public var appSecret: Swift.String
+  @objc public var requestId: Swift.String
+  @objc public var accessToken: Swift.String
+  @objc public init(domain: Swift.String, domainPath: Swift.String, authDomain: Swift.String, authDomainPath: Swift.String, appId: Swift.String, appSecret: Swift.String, requestId: Swift.String, accessToken: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class facesdkResult : ObjectiveC.NSObject {
+  @objc public var code: Foundation.NSNumber
+  @objc public var errorMesssage: Swift.String
+  @objc public var clientId: Swift.String?
+  @objc public var requestId: Swift.String?
+  public var livenessCheck: Swift.Bool?
+  @objc public var rawImage: Swift.String?
+  @objc public var facesdkResult: [Swift.String : Any]?
+  @objc public func toMap() -> [Swift.String : Any]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class ConfigUIFaceSDK : ObjectiveC.NSObject {
+  @objc public var primaryColor: Swift.String
+  @objc public var secondaryColor: Swift.String
+  @objc public var backgroundColor: Swift.String
+  @objc public var textColor: Swift.String
+  @objc public var textButtonColor: Swift.String
+  @objc public var borderInputColor: Swift.String
+  @objc public var errorColor: Swift.String
+  @objc public var closeColor: Swift.String
+  @objc public var stepBarColor: Swift.String
+  @objc public var stepBarBackgroundColor: Swift.String
+  @objc public var fontName: Swift.String
+  @objc public var borderRadius: Swift.Int
+  @objc public var defaultSpacing: Swift.Int
+  @objc public var imageConfirmation: Swift.Bool
+  @objc public var livenessType: Swift.String
+  @objc public var allowEditOcr: Swift.Bool
+  @objc public var isDisableSecurity: Swift.Bool
+  @objc public var hasInstroctions: Swift.Bool
+  @objc public var isManualSelfie: Swift.Bool
+  @objc public var isShowStepBar: Swift.Bool
+  @objc public var steps: Swift.Int
+  @objc public var currentStep: Swift.Int
+  @objc public var positionBackInitCamera: Swift.Bool
+  @objc public var maxRetry: Swift.Int
+  @objc public var errorTime: Swift.Int
+  @objc convenience public init(jsonString: Swift.String)
+  @objc public init(primaryColor: Swift.String, secondaryColor: Swift.String, backgroundColor: Swift.String, textColor: Swift.String, textButtonColor: Swift.String, borderInputColor: Swift.String, errorColor: Swift.String, closeColor: Swift.String, stepBarColor: Swift.String, stepBarBackgroundColor: Swift.String, fontName: Swift.String, borderRadius: Swift.Int, defaultSpacing: Swift.Int, maxRetry: Swift.Int, livenessType: Swift.String, imageConfirmation: Swift.Bool, allowEditOcr: Swift.Bool, hasInstroctions: Swift.Bool, isManualSelfie: Swift.Bool, isShowStepBar: Swift.Bool, steps: Swift.Int, currentStep: Swift.Int, positionBackInitCamera: Swift.Bool, isDisableSecurity: Swift.Bool, errorTime: Swift.Int)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class TrueIDClient : ObjectiveC.NSObject {
+  public static var zoomProductionKeyText: Swift.String
+  public static var zoomSessionID: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias FaceSDKListener = (_ cardInfo: FaceTrueIDSDK.facesdkResult) -> ()
+@_inheritsConvenienceInitializers @objc public class FaceID : ObjectiveC.NSObject {
+  public static var verificationResult: FaceTrueIDSDK.facesdkResult
+  public static var idType: Swift.String
+  public static var userID: Swift.String
+  public static var initCamera: Swift.Bool
+  @objc public static func configure(configInfo: FaceTrueIDSDK.ConfigInfoFaceSDK, configUI: FaceTrueIDSDK.ConfigUIFaceSDK)
+  @objc public static func start(listener: @escaping FaceTrueIDSDK.FaceSDKListener)
+  @objc public static func requestId() -> Swift.String
+  @objc public static func getRetryCounter() -> Swift.Int
+  @objc public static func setLanguage(language: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}

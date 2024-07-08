@@ -1,0 +1,33 @@
+{
+  "name": "@vinhtruong93/vci-true-id",
+  "version": "2.2.0",
+  "description": "This is a library dedicated to the eKYC feature.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vinhtruong93/vci-true-id.git"
+  },
+  "keywords": [
+    "react-native",
+    "ekyc",
+    "vietcap",
+    "vci"
+  ],
+  "author": "Vinh Truong",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
+  },
+  "bugs": {
+    "url": "https://github.com/vinhtruong93/vci-true-id/issues"
+  },
+  "homepage": "https://github.com/vinhtruong93/vci-true-id#readme"
+}

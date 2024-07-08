@@ -1,0 +1,4 @@
+framework module FaceTrueIDSDK {
+  header "FaceTrueIDSDK-Swift.h"
+  requires objc
+}

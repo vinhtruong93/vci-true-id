@@ -1,0 +1,11 @@
+framework module TrueIDSDK {
+  umbrella header "TrueIDSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module TrueIDSDK.Swift {
+  header "TrueIDSDK-Swift.h"
+  requires objc
+}
