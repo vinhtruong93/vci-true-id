@@ -1,5 +1,5 @@
 {
-  "name": "@vinhtruong93/vci-true-id",
+  "name": "vci-true-id",
   "version": "2.2.0",
   "description": "This is a library dedicated to the eKYC feature.",
   "main": "index.js",
